@@ -35,7 +35,7 @@
                 <div class="col-lg-5 ml-auto mr-auto">
                     <hr class="heading-spacer">
                     <div class="clearfix"></div>
-                    <form action="autenticar.php" method="post" class="form-signin">
+                    <form action="banco/autenticar.php" method="post" class="form-signin">
                         <h2 class="form-signin-heading">Entrar no Grupo</h2>
                         <label for="nome_grupo" class="sr-only">
                             Nome do Grupo

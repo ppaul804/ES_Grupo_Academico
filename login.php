@@ -50,7 +50,7 @@
                 <div class="col-lg-5 ml-auto mr-auto">
                     <hr class="heading-spacer">
                     <div class="clearfix"></div>
-                    <form action="autenticar.php" method="POST" class="form-signin">
+                    <form action="banco/autenticar.php" method="POST" class="form-signin">
                         <h2 class="form-signin-heading">Efetuar Login</h2>
                         <label for="usuario" class="sr-only">
                             Usuário

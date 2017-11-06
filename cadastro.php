@@ -34,7 +34,7 @@
                 <div class="col-lg-5 ml-auto mr-auto">
                     <hr class="heading-spacer">
                     <div class="clearfix"></div>
-                    <form action="cadastrar.php" method="post" class="form-signup">
+                    <form action="banco/cadastrar.php" method="post" class="form-signup">
                         <h2 class="form-signup-heading">Efetuar Cadastro</h2>
                         <label for="usuario" class="sr-only">
                             Usuário
