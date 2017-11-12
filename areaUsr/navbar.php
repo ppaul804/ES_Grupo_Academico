@@ -10,7 +10,7 @@ echo '
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <span>Olá</span>
+                    <span>Olá, bem vindo ao grupo.</span>
                 </li>
 
             </ul>

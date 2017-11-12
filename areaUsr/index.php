@@ -28,25 +28,66 @@
         ?>
 
         <!-- Page Content -->
-        <section class="content-section-a">
+        <section class="content-section-a" style="margin-top: 25px">
 
             <div class="container">
-                <h3>Grupos</h3>
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Submenu 1-1</a></li>
-                            <li><a href="#">Submenu 1-2</a></li>
-                            <li><a href="#">Submenu 1-3</a></li>                        
-                        </ul>
-                    </li>
-                    <li><a href="#">Menu 2</a></li>
-                    <li><a href="#">Menu 3</a></li>
-                </ul>
+
+                <p class="h3 text-center"><strong>Grupos</strong></p>
+                <br>
+
+                <form action="#">
+
+                    <div class="form-group">
+                        <label for="inputDisciplina">Adicionar disciplina</label>
+                        <input type="text" class="form-control" id="inputDisciplina" placeholder="Nome da disciplina">
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Adicionar disciplina</button>
+
+                </form>
             </div>
             <!-- /.container -->
+        </section>
+
+        <section class="content-section-b">
+            <div class="container">
+                <label>Selecionar disciplina</label>
+                <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="content-section-a">
+            <div class="conteiner">
+                <table class="table table-striped">
+                    
+                    <tr>
+                    <strong>
+                        <th>test</th>
+                        <th>test</th>
+                        <th>test</th>
+                    </strong>
+                    </tr>
+                    
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    
+                </table>
+            </div>
         </section>
 
 
