@@ -64,29 +64,106 @@
 
         <section class="content-section-a">
             <div class="conteiner">
-                <table class="table table-striped">
-                    
-                    <tr>
-                    <strong>
-                        <th>test</th>
-                        <th>test</th>
-                        <th>test</th>
-                    </strong>
-                    </tr>
-                    
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                    </tr>
-                    
-                </table>
+                <p class="h4 text-center"><strong>Notações</strong></p>
+                <br>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <table class="table table-hover table-striped">
+
+                            <tr>
+                            <strong>
+                                <th>test</th>
+                                <th>test</th>
+                                <th>test</th>
+                            </strong>
+                            </tr>
+
+                            <tr>
+                                <td>test</td>
+                                <td>test</td>
+                                <td>test</td>
+                            </tr>
+
+                            <tr>
+                                <td>test</td>
+                                <td>test</td>
+                                <td>test</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section-b">
+            <div class="conteiner">
+                <p class="h4 text-center"><strong>Arquivos</strong></p>
+                <br>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <table class="table table-hover table-striped">
+
+                            <tr>
+                            <strong>
+                                <th>test</th>
+                                <th>test</th>
+                                <th>test</th>
+                            </strong>
+                            </tr>
+
+                            <tr>
+                                <td>test</td>
+                                <td>test</td>
+                                <td>test</td>
+                            </tr>
+
+                            <tr>
+                                <td>test</td>
+                                <td>test</td>
+                                <td>test</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section-a">
+            <div class="conteiner">
+                <p class="h4 text-center"><strong>Eventos</strong></p>
+                <br>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <table class="table table-hover table-striped">
+
+                            <tr>
+                            <strong>
+                                <th>test</th>
+                                <th>test</th>
+                                <th>test</th>
+                            </strong>
+                            </tr>
+
+                            <tr>
+                                <td>test</td>
+                                <td>test</td>
+                                <td>test</td>
+                            </tr>
+
+                            <tr>
+                                <td>test</td>
+                                <td>test</td>
+                                <td>test</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
             </div>
         </section>
 

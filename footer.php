@@ -4,13 +4,7 @@ echo '
 <footer class="footer">
     <div class="container">
         <div class="navbar navbar-default navbar-fixed-bottom">
-            <ul class="list-inline">	
-                <!-- <li class="footer-menu-divider list-inline-item">&sdot;</li>
-                <li class="list-inline-item">
-                    <a href="#">Item lista</a>
-                </li> -->
-            </ul>
-            <p class="copyright text-muted pull-left small">Copyright &copy; Grupo Acadêmico 2017. All Rights Reserved</p>
+            <p class="copyright text-muted small">Copyright &copy; Grupo Acadêmico 2017. All Rights Reserved</p>
         </div>
     </div>
 </footer>

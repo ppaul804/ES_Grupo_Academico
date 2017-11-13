@@ -4,21 +4,15 @@ echo '
 <footer class="footer">
     <div class="container">
         <div class="navbar navbar-default navbar-fixed-bottom">
-            <ul class="list-inline">	
-                <!-- <li class="footer-menu-divider list-inline-item">&sdot;</li>
-                <li class="list-inline-item">
-                    <a href="#">Voltar ao topo <i class="fa fa-angle-double-up"></i></a>
-                </li> -->
-            </ul>
-            <p class="copyright text-muted pull-left small">Copyright &copy; Grupo Acadêmico 2017. All Rights Reserved</p>
+            <p class="copyright text-muted small">Copyright &copy; Grupo Acadêmico 2017. All Rights Reserved</p>
         </div>
     </div>
 </footer>
+
 <button onclick="topFunction()" id="botaoTopo" title="Voltar ao topo" type="button" 
 class="btn btn-secondary">
     Voltar ao topo <i class="fa fa-angle-double-up"></i>
 </button>
-
 
 <script>
 // When the user scrolls down 20px from the top of the document, show the button
