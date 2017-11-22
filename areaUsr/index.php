@@ -34,6 +34,15 @@
                 <p class="h3 text-center"><strong>Grupos</strong></p>
                 <br>
 
+                <form action="../criaGrupo.php.php">
+                    <div class="form-group">
+                        <label for="inputGrupo">Adicionar Grupo</label>
+                        <input id="inputGrupo" name="inputGrupo" type="text" class="form-control" placeholder="Nome da Grupo">
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Adicionar grupo</button>
+                </form>
+                </br>
                 <form action="../banco/cadastrarDisciplina.php">
                     <div class="form-group">
                         <label for="inputDisciplina">Adicionar disciplina</label>
