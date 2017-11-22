@@ -33,39 +33,11 @@
 
                 <p class="h3 text-center"><strong>Grupos</strong></p>
                 <br>
-
-                <form action="../criaGrupo.php.php">
-                    <div class="form-group">
-                        <label for="inputGrupo">Adicionar Grupo</label>
-                        <input id="inputGrupo" name="inputGrupo" type="text" class="form-control" placeholder="Nome da Grupo">
-                    </div>
-
-                    <button type="submit" class="btn btn-default">Adicionar grupo</button>
-                </form>
-                </br>
-                <form action="../banco/cadastrarDisciplina.php">
-                    <div class="form-group">
-                        <label for="inputDisciplina">Adicionar disciplina</label>
-                        <input id="inputDisciplina" name="inputDisciplina" type="text" class="form-control" placeholder="Nome da disciplina">
-                    </div>
-
-                    <button type="submit" class="btn btn-default">Adicionar disciplina</button>
-                </form>
-            </div>
+                
+                <a href="grupo.php" class="btn btn-default" role="button">Grupo</a>
+                <a href="disciplina.php" class="btn btn-default" role="button">Disciplina</a>
+                
             <!-- /.container -->
-        </section>
-
-        <section class="content-section-b">
-            <div class="container">
-                <label>Selecionar disciplina</label>
-                <select class="form-control">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
         </section>
 
         <section class="content-section-a">
@@ -79,22 +51,22 @@
 
                             <tr>
                             <strong>
-                                <th>test</th>
-                                <th>test</th>
-                                <th>test</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
                             </strong>
                             </tr>
 
                             <tr>
-                                <td>test</td>
-                                <td>test</td>
-                                <td>test</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
 
                             <tr>
-                                <td>test</td>
-                                <td>test</td>
-                                <td>test</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
 
                         </table>
@@ -114,22 +86,22 @@
 
                             <tr>
                             <strong>
-                                <th>test</th>
-                                <th>test</th>
-                                <th>test</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
                             </strong>
                             </tr>
 
                             <tr>
-                                <td>test</td>
-                                <td>test</td>
-                                <td>test</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
 
                             <tr>
-                                <td>test</td>
-                                <td>test</td>
-                                <td>test</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
 
                         </table>
@@ -149,22 +121,22 @@
 
                             <tr>
                             <strong>
-                                <th>test</th>
-                                <th>test</th>
-                                <th>test</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
                             </strong>
                             </tr>
 
                             <tr>
-                                <td>test</td>
-                                <td>test</td>
-                                <td>test</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
 
                             <tr>
-                                <td>test</td>
-                                <td>test</td>
-                                <td>test</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
 
                         </table>

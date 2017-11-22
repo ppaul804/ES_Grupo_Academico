@@ -12,7 +12,7 @@ echo '
                 <li class="nav-item">
                     <span>Olá, bem vindo ao grupo.</span>
                 </li>
-
+                <a href="../index.php" class="btn btn-default" role="button">sair</a>
             </ul>
         </div>
     </div>
