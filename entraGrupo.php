@@ -37,10 +37,12 @@
                     <div class="clearfix"></div>
                     <form action="banco/autenticar.php" method="post" class="form-signin">
                         <h2 class="form-signin-heading">Entrar no Grupo</h2>
+                        <br>
                         <label for="nome_grupo" class="sr-only">
                             Nome do Grupo
                         </label>
                         <input id="nome_grupo" class="form-control" placeholder="Nome do Grupo" required="" autofocus="" type="email">
+                        <br>
                         <label for="senha" class="sr-only">
                             Senha
                         </label>

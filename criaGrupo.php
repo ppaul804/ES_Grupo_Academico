@@ -35,18 +35,22 @@
                     <div class="clearfix"></div>
                     <form action="?.php" method="post" class="form-signup">
                         <h2 class="form-signup-heading">Cria Grupo</h2>
+                        <br>
                         <label for="nome_grupo" class="sr-only">
                             Nome do Grupo
                         </label>
                         <input id="nome_grupo" class="form-control" placeholder="Nome do Grupo" required="" autofocus="" type="text">
+                        <br>
                         <label for="nome_curso" class="sr-only">
                             Nome do Curso
                         </label>
                         <input id="nome_curso" class="form-control" placeholder="Nome do Curso" required="" autofocus="" type="text">
+                        <br>
                         <label for="senha" class="sr-only">
                             Senha
                         </label>
                         <input id="senha" class="form-control" placeholder="Senha" required="" type="password">
+                        <br>
                         <label for="senhaAux" class="sr-only">
                             Senha
                         </label>

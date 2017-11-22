@@ -40,7 +40,7 @@
                         <input id="inputDisciplina" name="inputDisciplina" type="text" class="form-control" placeholder="Nome do Disciplina">
                     </div>
 
-                    <button type="submit" class="btn btn-default">Adicionar disciplina</button>
+                    <button type="submit" class="btn btn-primary">Adicionar disciplina</button>
                 </form>
             </div>
             <!-- /.container -->
@@ -51,9 +51,137 @@
                 <label>Selecionar disciplina</label>
                 <select class="form-control">
                 </select>
-                <button type="submit" class="btn btn-default">Selecionar disciplina</button>
+                <br>
+                <button type="submit" class="btn btn-primary">Selecionar disciplina</button>
             </div>
         </section>
+
+        <section class="content-section-a">
+            <div class="conteiner">
+                <p class="h4 text-center"><strong>Notações</strong></p>
+                <br>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <table class="table table-hover table-striped">
+                            <tr>
+                            <strong>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </strong>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <!--Botões-->
+            <div class="container">
+                <div class="col-md-4 text-center"> 
+                    <button id="inserir" name="inserir" class="btn btn-primary">Inserir</button> 
+                    <button id="editar" name="editar" class="btn btn-primary">Editar</button> 
+                    <button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section-b">
+            <div class="conteiner">
+                <p class="h4 text-center"><strong>Arquivos</strong></p>
+                <br>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <table class="table table-hover table-striped">
+
+                            <tr>
+                            <strong>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </strong>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--Botões-->
+            <div class="container">
+                <div class="col-md-4 text-center"> 
+                    <button id="inserir" name="inserir" class="btn btn-primary">Inserir</button> 
+                    <button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section-a">
+            <div class="conteiner">
+                <p class="h4 text-center"><strong>Eventos</strong></p>
+                <br>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <table class="table table-hover table-striped">
+
+                            <tr>
+                            <strong>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </strong>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--Botões-->
+            <div class="container">
+                <div class="col-md-4 text-center"> 
+                    <button id="inserir" name="inserir" class="btn btn-primary">Inserir</button> 
+                    <button id="editar" name="editar" class="btn btn-primary">Editar</button> 
+                    <button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
+                </div>
+            </div>
+        </section>
+
         <!-- Footer -->
         <?php
         include 'footer.php';

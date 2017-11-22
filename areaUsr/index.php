@@ -28,124 +28,42 @@
 
         <!-- Page Content -->
         <section class="content-section-a" style="margin-top: 25px">
-
             <div class="container">
-
                 <p class="h3 text-center"><strong>Grupos</strong></p>
                 <br>
-                
-                <a href="grupo.php" class="btn btn-default" role="button">Grupo</a>
-                <a href="disciplina.php" class="btn btn-default" role="button">Disciplina</a>
-                
-            <!-- /.container -->
-        </section>
-
-        <section class="content-section-a">
-            <div class="conteiner">
-                <p class="h4 text-center"><strong>Notações</strong></p>
+                <label>Selecionar grupo</label>
+                <select class="form-control">
+                </select>
                 <br>
-                <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                        <table class="table table-hover table-striped">
-
-                            <tr>
-                            <strong>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                            </strong>
-                            </tr>
-
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                        </table>
-                    </div>
-                </div>
+                <a href="disciplina.php" class="btn btn-primary" role="button">Abrir</a>
             </div>
         </section>
 
         <section class="content-section-b">
-            <div class="conteiner">
-                <p class="h4 text-center"><strong>Arquivos</strong></p>
-                <br>
-                <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                        <table class="table table-hover table-striped">
-
-                            <tr>
-                            <strong>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                            </strong>
-                            </tr>
-
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                        </table>
+            <div class="container">
+                <form action="#">
+                    <div class="form-group">
+                        <label for="inputGrupo">Adicionar Grupo</label>
+                        <input id="inputGrupo" name="inputGrupo" type="text" class="form-control" placeholder="Nome do Grupo">
                     </div>
-                </div>
+
+                    <button type="submit" class="btn btn-primary">Adicionar grupo</button>
+                </form>
             </div>
         </section>
 
         <section class="content-section-a">
-            <div class="conteiner">
-                <p class="h4 text-center"><strong>Eventos</strong></p>
-                <br>
-                <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                        <table class="table table-hover table-striped">
-
-                            <tr>
-                            <strong>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                            </strong>
-                            </tr>
-
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                        </table>
+            <div class="container">
+                <form action="#">
+                    <div class="form-group">
+                        <label for="inputPesquisa">Pesquisar Grupo</label>
+                        <input id="inputPesquisa" name="inputPesquisa" type="text" class="form-control" placeholder="Pesquisar">
+                        <br>
+                        <button class="btn btn-primary" type="submit">Entrar</button>
                     </div>
-                </div>
+                </form>
             </div>
         </section>
-
-
         <!-- Footer -->
         <?php
         include 'footer.php';

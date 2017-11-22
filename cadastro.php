@@ -28,7 +28,7 @@
     ?>
 
     <!-- Page Content -->
-    <section class="content-section-a">
+    <section class="content-section-b">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 ml-auto mr-auto">
@@ -36,10 +36,12 @@
                     <div class="clearfix"></div>
                     <form action="banco/cadastrar.php" method="post" class="form-signup">
                         <h2 class="form-signup-heading">Efetuar Cadastro</h2>
+                        <br>
                         <label for="usuario" class="sr-only">
                             Usuário
                         </label>
                         <input id="usuario" name="usuario" class="form-control" placeholder="Usuário" required="" autofocus="" type="text">
+                        <br>
                         <label for="senha" class="sr-only">
                             Senha
                         </label>
