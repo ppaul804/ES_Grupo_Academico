@@ -21,7 +21,6 @@
     </head>
 
     <body>
-
         <!-- Navegação -->
         <?php
         include 'navbar.php';
@@ -35,15 +34,13 @@
                 <p class="h3 text-center"><strong>Grupos</strong></p>
                 <br>
 
-                <form action="#">
-
+                <form action="../banco/cadastrarDisciplina.php">
                     <div class="form-group">
                         <label for="inputDisciplina">Adicionar disciplina</label>
-                        <input type="text" class="form-control" id="inputDisciplina" placeholder="Nome da disciplina">
+                        <input id="inputDisciplina" name="inputDisciplina" type="text" class="form-control" placeholder="Nome da disciplina">
                     </div>
 
                     <button type="submit" class="btn btn-default">Adicionar disciplina</button>
-
                 </form>
             </div>
             <!-- /.container -->

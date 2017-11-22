@@ -12,6 +12,6 @@ if ($query1 == 1) {
 } else {
     mysql_query("INSERT INTO tb_usuario (usr_usuario, pwd_usuario) values ('$usuario','$senha')");
     echo "<script>alert('Usuário cadastrado com sucesso.');</script>";
-    #echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=login.php'>";
+    echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=../login.php'>";
 }
 ?>

@@ -55,11 +55,11 @@
                         <label for="usuario" class="sr-only">
                             Usuário
                         </label>
-                        <input id="usuario" class="form-control" placeholder="Usuário" required="" autofocus="" type="text">
+                        <input id="usuario" name="usuario" class="form-control" placeholder="Usuário" required="" autofocus="" type="text">
                         <label for="senha" class="sr-only">
                             Senha
                         </label>
-                        <input id="senha" class="form-control" placeholder="Senha" required="" type="password">
+                        <input id="senha" name="senha" class="form-control" placeholder="Senha" required="" type="password">
                         <div class="checkbox">
                             <label>
                                 <input value="lembrar-me" type="checkbox"> Lembrar-me
