@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Grupo AcadÃªmico</title>
+    <title>Grupo Acadêmico</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
 
-    <!-- NavegaÃ§Ã£o -->
+    <!-- Navegação -->
     <?php
     include 'navbar.php';
     ?>
@@ -53,13 +53,13 @@
                     <form action="banco/autenticar.php" method="POST" class="form-signin">
                         <h2 class="form-signin-heading">Efetuar Login</h2>
                         <label for="usuario" class="sr-only">
-                            UsuÃ¡rio
+                            Usuário
                         </label>
-                        <input id="usuario" name="usuario" class="form-control" placeholder="UsuÃ¡rio" required="" autofocus="" type="text">
+                        <input id="usuario" name="usuario" class="form-control" placeholder="Usuário" required autofocus="" type="text">
                         <label for="senha" class="sr-only">
                             Senha
                         </label>
-                        <input id="senha" name="senha" class="form-control" placeholder="Senha" required="" type="password">
+                        <input id="senha" name="senha" class="form-control" placeholder="Senha" required type="password">
                         <div class="checkbox">
                             <label>
                                 <input value="lembrar-me" type="checkbox"> Lembrar-me
@@ -77,7 +77,7 @@
         </div> <!-- /container -->
     </section>
 
-    <!-- RodapÃ© -->
+    <!-- Rodapé -->
     <?php
     include 'footer.php';
     ?>

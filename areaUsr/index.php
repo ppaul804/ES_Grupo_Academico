@@ -30,23 +30,31 @@
         <section class="content-section-a" style="margin-top: 25px">
             <div class="container">
                 <p class="h3 text-center"><strong>Grupos</strong></p>
-                <br>
-                <label>Selecionar grupo</label>
-                <select class="form-control">
-                </select>
-                <br>
-                <a href="disciplina.php" class="btn btn-primary" role="button">Abrir</a>
+                <br>		
+				
+				<?php require "../banco/configuracao.php";
+				$query = mysql_query("SELECT * FROM tb_grupo"); ?>
+				
+                <form name="produto" method="post" action=""> 
+					<label>Selecionar Grupo:</label> 
+					<select> 
+						<?php while($prod = mysql_fetch_array($query)) { ?> 
+							<option value="<?php echo $prod['idt_grupo'] ?>"><?php echo $prod['nme_grupo'] ?></option> <?php 
+						} ?> 
+					</select> 
+					<br>
+					<a href="disciplina.php" class="btn btn-primary" role="button">Abrir</a>
+				</form>
             </div>
         </section>
 
         <section class="content-section-b">
             <div class="container">
-                <form action="#">
+                <form action="banco/grupoCadastrar.php" method="POST">
                     <div class="form-group">
                         <label for="inputGrupo">Adicionar Grupo</label>
-                        <input id="inputGrupo" name="inputGrupo" type="text" class="form-control" placeholder="Nome do Grupo">
+                        <input id="inputGrupo" name="inputGrupo" type="text" class="form-control" required placeholder="Nome do Grupo">
                     </div>
-
                     <button type="submit" class="btn btn-primary">Adicionar grupo</button>
                 </form>
             </div>
@@ -54,10 +62,10 @@
 
         <section class="content-section-a">
             <div class="container">
-                <form action="#">
+                <form action="banco/grupoPesquisar.php" method="POST">
                     <div class="form-group">
                         <label for="inputPesquisa">Pesquisar Grupo</label>
-                        <input id="inputPesquisa" name="inputPesquisa" type="text" class="form-control" placeholder="Pesquisar">
+                        <input id="inputPesquisa" name="inputPesquisa" type="text" class="form-control" required placeholder="Pesquisar">
                         <br>
                         <button class="btn btn-primary" type="submit">Entrar</button>
                     </div>
