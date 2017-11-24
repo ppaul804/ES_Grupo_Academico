@@ -27,10 +27,9 @@
         ?>
 
         <!-- Page Content -->
-        <section class="content-section-a" style="margin-top: 25px">
-            <div class="container">
-                <p class="h3 text-center"><strong>Grupos</strong></p>
-                <br>		
+        <section class="content-section-b" style="margin-top: 25px">
+            <div class="container">			
+				<p class="h3 text-center"><strong>Grupos</strong></p>
 				
 				<?php require "../banco/configuracao.php";
 				
@@ -39,20 +38,20 @@
 				$idt_usuario = $_SESSION["idt_usuario"];
 				$query = mysql_query("SELECT * FROM tb_grupo WHERE idt_grupo IN (SELECT fk_idt_grupo FROM ta_usuario_grupo WHERE fk_idt_usuario = $idt_usuario)"); ?>
 				
-                <form name="produto" method="post" action=""> 
+                <form action="banco/disciplinaCadastrar.php" method="POST"> 
 					<label>Selecionar Grupo:</label> 
-					<select> 
+					<select id="grupos" name="grupos"> 
 						<?php while($prod = mysql_fetch_array($query)) { ?> 
 							<option value="<?php echo $prod['idt_grupo'] ?>"><?php echo $prod['nme_grupo'] ?></option> <?php 
 						} ?> 
 					</select> 
 					<br>
-					<a href="disciplina.php" class="btn btn-primary" role="button">Abrir</a>
+					<button class="btn btn-primary" type="submit">Abrir</button>									
 				</form>
             </div>
         </section>
 
-        <section class="content-section-b">
+        <section class="content-section-a">
             <div class="container">
                 <form action="banco/grupoCadastrar.php" method="POST">
                     <div class="form-group">
@@ -64,7 +63,7 @@
             </div>
         </section>
 
-        <section class="content-section-a">
+        <section class="content-section-b">
             <div class="container">
                 <form action="banco/grupoPesquisar.php" method="POST">
                     <div class="form-group">

@@ -15,7 +15,7 @@ if ($query1 == 1) {
 	mysql_query("INSERT INTO ta_usuario_grupo (fk_idt_usuario, fk_idt_grupo) VALUES ($idt_usuario, $idt_grupo)");	
 	
     echo "<script>alert('Você entrou nesse grupo!'); history.back();</script>";
-	echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=../index.php'>";
+	echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=../grupo.php'>";
 } else {	
     echo "<script>alert('Grupo não existe.'); history.back();</script>";
 }

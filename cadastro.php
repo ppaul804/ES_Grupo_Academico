@@ -1,4 +1,4 @@
-l<!DOCTYPE html>
+<!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,7 +34,7 @@ l<!DOCTYPE html>
                 <div class="col-lg-5 ml-auto mr-auto">
                     <hr class="heading-spacer">
                     <div class="clearfix"></div>
-                    <form action="banco/cadastrar.php" method="post" class="form-signup">
+                    <form action="banco/cadastrar.php" method="POST" class="form-signup">
                         <h2 class="form-signup-heading">Efetuar Cadastro</h2>
                         <label for="usuario" class="sr-only"> Usuário </label>
                         <input id="usuario" name="usuario" class="form-control" placeholder="Usuário" required autofocus="" type="text">
@@ -43,9 +43,7 @@ l<!DOCTYPE html>
                         <br>
                         <!--<div class="g-recaptcha" data-sitekey="your_site_key"></div>
                         <br>-->
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">
-                            Cadastrar
-                        </button>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit"> Cadastrar </button>
                     </form>
                 </div>
             </div>

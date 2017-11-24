@@ -16,7 +16,7 @@ if ($total == 1) {
     $_SESSION["idt_usuario"] = $dados["idt_usuario"];
 	$_SESSION["usr_usuario"] = stripslashes($dados["usr_usuario"]);
 
-    header("Location: ..\\areaUsr\\index.php"); 
+    header("Location: ..\\areaUsr\\grupo.php"); 
     exit;
 } else {
     echo "<script>alert('Login e/ou senha incorreto(s)'); history.back();</script>";

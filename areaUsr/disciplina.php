@@ -27,36 +27,32 @@
         ?>
 
         <!-- Page Content -->
-        <section class="content-section-a" style="margin-top: 25px">
-
+        <section class="content-section-b" style="margin-top: 25px">
             <div class="container">
-
                 <p class="h3 text-center"><strong>Disciplinas</strong></p>
-                <br>
-
+				
                 <form action="../cadastrarDisciplina.php">
                     <div class="form-group">
-                        <label for="inputDisciplina">Adicionar Disciplina</label>
-                        <input id="inputDisciplina" name="inputDisciplina" type="text" class="form-control" placeholder="Nome do Disciplina">
+                        <label for="inputDisciplina">Criar Nova Disciplina</label>
+                        <input id="inputDisciplina" name="inputDisciplina" type="text" class="form-control" required placeholder="Nome do Disciplina">
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Adicionar disciplina</button>
+                    <button type="submit" class="btn btn-primary">Criar</button>
                 </form>
-            </div>
-            <!-- /.container -->
-        </section>
-
-        <section class="content-section-b">
-            <div class="container">
-                <label>Selecionar disciplina</label>
-                <select class="form-control">
-                </select>
-                <br>
-                <button type="submit" class="btn btn-primary">Selecionar disciplina</button>
             </div>
         </section>
 
         <section class="content-section-a">
+            <div class="container">
+                <label>Selecionar Disciplina</label>
+                <select class="form-control">
+                </select>
+                <br>
+                <button type="submit" class="btn btn-primary">Selecionar</button>
+            </div>
+        </section>
+
+        <section class="content-section-b">
             <div class="conteiner">
                 <p class="h4 text-center"><strong>Notações</strong></p>
                 <br>
@@ -88,8 +84,8 @@
                 <br>
             </div>
             <!--Botões-->
-            <div class="container">
-                <div class="col-md-4 text-center"> 
+            <div class="container" >
+                <div>
                     <button id="inserir" name="inserir" class="btn btn-primary">Inserir</button> 
                     <button id="editar" name="editar" class="btn btn-primary">Editar</button> 
                     <button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
@@ -97,7 +93,7 @@
             </div>
         </section>
 
-        <section class="content-section-b">
+        <section class="content-section-a">
             <div class="conteiner">
                 <p class="h4 text-center"><strong>Arquivos</strong></p>
                 <br>
@@ -139,7 +135,7 @@
             </div>
         </section>
 
-        <section class="content-section-a">
+        <section class="content-section-b">
             <div class="conteiner">
                 <p class="h4 text-center"><strong>Eventos</strong></p>
                 <br>
@@ -174,7 +170,7 @@
             </div>
             <!--Botões-->
             <div class="container">
-                <div class="col-md-4 text-center"> 
+                <div> 
                     <button id="inserir" name="inserir" class="btn btn-primary">Inserir</button> 
                     <button id="editar" name="editar" class="btn btn-primary">Editar</button> 
                     <button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
