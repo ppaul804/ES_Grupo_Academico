@@ -14,6 +14,7 @@ $total = mysql_num_rows($query);
 if ($total == 1) {
     $dados = mysql_fetch_array($query);
     $_SESSION["idt_usuario"] = $dados["idt_usuario"];
+	$_SESSION["usr_usuario"] = stripslashes($dados["usr_usuario"]);
 
     header("Location: ..\\areaUsr\\index.php"); 
     exit;

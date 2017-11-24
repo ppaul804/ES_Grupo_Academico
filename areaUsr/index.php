@@ -33,7 +33,11 @@
                 <br>		
 				
 				<?php require "../banco/configuracao.php";
-				$query = mysql_query("SELECT * FROM tb_grupo"); ?>
+				
+				session_start();
+				
+				$idt_usuario = $_SESSION["idt_usuario"];
+				$query = mysql_query("SELECT * FROM tb_grupo WHERE idt_grupo IN (SELECT fk_idt_grupo FROM ta_usuario_grupo WHERE fk_idt_usuario = $idt_usuario)"); ?>
 				
                 <form name="produto" method="post" action=""> 
 					<label>Selecionar Grupo:</label> 
@@ -52,10 +56,10 @@
             <div class="container">
                 <form action="banco/grupoCadastrar.php" method="POST">
                     <div class="form-group">
-                        <label for="inputGrupo">Adicionar Grupo</label>
+                        <label for="inputGrupo">Criar Novo Grupo</label>
                         <input id="inputGrupo" name="inputGrupo" type="text" class="form-control" required placeholder="Nome do Grupo">
                     </div>
-                    <button type="submit" class="btn btn-primary">Adicionar grupo</button>
+                    <button type="submit" class="btn btn-primary">Criar</button>
                 </form>
             </div>
         </section>

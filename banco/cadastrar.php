@@ -10,7 +10,7 @@ $query1 = mysql_num_rows($query);
 if ($query1 == 1) {
     echo "<script>alert('Esse login já existe.'); history.back();</script>";
 } else {
-    mysql_query("INSERT INTO tb_usuario (usr_usuario, pwd_usuario) values ('$usuario','$senha')");
+    mysql_query("INSERT INTO tb_usuario (usr_usuario, pwd_usuario) VALUES ('$usuario','$senha')");
     echo "<script>alert('Usuário cadastrado com sucesso.');</script>";
     echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=../login.php'>";
 }
