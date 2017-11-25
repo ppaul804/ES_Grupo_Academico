@@ -31,7 +31,7 @@
             <div class="container">
                 <p class="h3 text-center"><strong>Disciplinas</strong></p>
 				
-                <form action="../cadastrarDisciplina.php">
+                <form action="banco/disciplinaCadastrar.php" method="POST">
                     <div class="form-group">
                         <label for="inputDisciplina">Criar Nova Disciplina</label>
                         <input id="inputDisciplina" name="inputDisciplina" type="text" class="form-control" required placeholder="Nome do Disciplina">
@@ -44,11 +44,24 @@
 
         <section class="content-section-a">
             <div class="container">
-                <label>Selecionar Disciplina</label>
-                <select class="form-control">
-                </select>
-                <br>
-                <button type="submit" class="btn btn-primary">Selecionar</button>
+			
+				<?php require "../banco/configuracao.php";
+				
+				session_start();
+				
+				$grupos = $_SESSION["grupos"];
+				$query = mysql_query("SELECT * FROM tb_disciplina WHERE fk_idt_grupo = $grupos"); ?>
+			
+				<form action="" method="POST"> 
+					<label>Selecionar Disciplina:</label> 
+					<select id="disciplinas" name="disciplinas"> 
+						<?php while($prod = mysql_fetch_array($query)) { ?> 
+							<option value="<?php echo $prod['idt_disciplina'] ?>"><?php echo $prod['nme_disciplina'] ?></option> <?php 
+						} ?> 
+					</select> 
+					<br>
+					<button class="btn btn-primary" type="submit">Selecionar</button>									
+				</form>							
             </div>
         </section>
 

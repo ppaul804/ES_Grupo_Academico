@@ -41,7 +41,6 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `Academico`.`tb_disciplina` (
   `idt_disciplina` INT(3) ZEROFILL NOT NULL AUTO_INCREMENT,
   `nme_disciplina` VARCHAR(20) NOT NULL,
-  `smt_disciplina` INT(2) NOT NULL,
   `fk_idt_grupo` INT(3) ZEROFILL NOT NULL,
   PRIMARY KEY (`idt_disciplina`, `fk_idt_grupo`),
   INDEX `fk_Disciplina_Grupo1_idx` (`fk_idt_grupo` ASC),
