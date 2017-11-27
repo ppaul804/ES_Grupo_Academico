@@ -50,12 +50,12 @@
 				session_start();
 				
 				$grupos = $_SESSION["grupos"];
-				$query = mysqli_query($conexao, "SELECT * FROM tb_disciplina WHERE fk_idt_grupo = $grupos"); ?>
+				$query = mysql_query("SELECT * FROM tb_disciplina WHERE fk_idt_grupo = $grupos"); ?>
 			
 				<form action="" method="POST"> 
 					<label>Selecionar Disciplina:</label> 
 					<select id="disciplinas" name="disciplinas"> 
-						<?php while($prod = mysqli_fetch_array($query)) { ?> 
+						<?php while($prod = mysql_fetch_array($query)) { ?> 
 							<option value="<?php echo $prod['idt_disciplina'] ?>"><?php echo $prod['nme_disciplina'] ?></option> <?php 
 						} ?> 
 					</select> 

@@ -36,13 +36,12 @@
 				session_start();
 				
 				$idt_usuario = $_SESSION["idt_usuario"];
-				$query = "SELECT * FROM tb_grupo WHERE idt_grupo IN (SELECT fk_idt_grupo FROM ta_usuario_grupo WHERE fk_idt_usuario = $idt_usuario)";
-				$result = mysqli_query($conexao, $query) or die (mysqli_error($conexao)); ?>
-                                
+				$query = mysql_query("SELECT * FROM tb_grupo WHERE idt_grupo IN (SELECT fk_idt_grupo FROM ta_usuario_grupo WHERE fk_idt_usuario = $idt_usuario)"); ?>
+				
                 <form action="banco/disciplinaAbrir.php" method="POST"> 
 					<label>Selecionar Grupo:</label> 
 					<select id="grupos" name="grupos"> 
-						<?php while($prod = mysqli_fetch_array($result)) { ?> 
+						<?php while($prod = mysql_fetch_array($query)) { ?> 
 							<option value="<?php echo $prod['idt_grupo'] ?>"><?php echo $prod['nme_grupo'] ?></option> <?php 
 						} ?> 
 					</select> 
