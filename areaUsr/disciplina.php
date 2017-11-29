@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Grupo Acadêmico</title>
+        <title>Grupo Academico</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,7 @@
     </head>
 
     <body>
-        <!-- Navegação -->
+        <!-- Navega��o -->
         <?php
         include 'navbar.php';
         ?>
@@ -96,12 +96,21 @@
                 </div>
                 <br>
             </div>
-            <!--Botões-->
+            <!--Bot�es-->
             <div class="container" >
                 <div>
+                    <form action="inserirNota.php">
                     <button id="inserir" name="inserir" class="btn btn-primary">Inserir</button> 
-                    <button id="editar" name="editar" class="btn btn-primary">Editar</button> 
+                    </form>
+                    <br>
+                    <form action =""> 
+                    <button id="editar" name="editar" class="btn btn-primary">Editar</button>
+                    </form>
+                    <br>
+                    <form action ="">  
                     <button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
+                    </form>
+
                 </div>
             </div>
         </section>
@@ -139,7 +148,7 @@
                     </div>
                 </div>
             </div>
-            <!--Botões-->
+            <!--Bot�es-->
             <div class="container">
                 <div class="col-md-4 text-center"> 
                     <button id="inserir" name="inserir" class="btn btn-primary">Inserir</button> 
@@ -181,12 +190,18 @@
                     </div>
                 </div>
             </div>
-            <!--Botões-->
+            <!--Bot�es-->
             <div class="container">
                 <div> 
-                    <button id="inserir" name="inserir" class="btn btn-primary">Inserir</button> 
-                    <button id="editar" name="editar" class="btn btn-primary">Editar</button> 
-                    <button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
+          <form action="inserirEvento.php">                    
+               <button id="inserir" name="inserir" class="btn btn-primary">Inserir</button> 
+          </form>
+            <br>    
+           <form action ="">                
+               <button id="editar" name="editar" class="btn btn-primary">Editar</button> 
+           </form>
+           <br>
+<button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
                 </div>
             </div>
         </section>
