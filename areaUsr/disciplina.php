@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Grupo Acadêmico</title>
+        <title>Grupo AcadÃªmico</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -15,13 +15,14 @@
         <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="shortcut icon" href="../img/favicon.png">
 
         <!-- Custom styles for this template -->
         <link href="../css/landing-page.css" rel="stylesheet">
     </head>
 
     <body>
-        <!-- Navegação -->
+        <!-- NavegaÃ§Ã£o -->
         <?php
         include 'navbar.php';
         ?>
@@ -68,7 +69,7 @@
   
         <section class="content-section-b">
             <div class="conteiner">
-                <p class="h4 text-center"><strong>Notações</strong></p>
+                <p class="h4 text-center"><strong>NotaÃ§Ãµes</strong></p>
 				                 
                 <br>
                 <div class="row">
@@ -98,7 +99,7 @@
                 </div>
                 <br>
             </div>
-            <!--Botões-->
+            <!--BotÃµes-->
             <div class="container" >
                 <div>							
 				
@@ -170,7 +171,7 @@
                 </div>
             </div>
 		
-            <!--Botões-->
+            <!--BotÃµes-->
 			
             <div class="container">
                 <div class="col-md-4 text-center"> 
@@ -221,7 +222,7 @@
                     </div>
                 </div>
             </div>
-            <!--Botões-->
+            <!--BotÃµes-->
             <div class="container">
                 <div> 
               <form action="inserirEvento.php">                    
