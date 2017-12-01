@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Grupo Acad�mico</title>
+        <title>Grupo Acadêmico</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,7 @@
     </head>
 
     <body>
-        <!-- Navega��o -->
+        <!-- Navegação -->
         <?php
         include 'navbar.php';
         ?>
@@ -29,26 +29,31 @@
         <!-- Page Content -->
         <section class="content-section-b" style="margin-top: 25px">
             <div class="container">			
-				<p class="h3 text-center"><strong>Notas</strong></p>
+				<p class="h3 text-center"><strong>Arquivos</strong></p>
 				
 				<?php require "../banco/configuracao.php";
 				
-				session_start();
-			             
-                $id = $_GET['idDisciplina']; ?>								
+				session_start();			
+                             
+                $id = $_GET['idDisciplina']; 
+				
+				?>								
 				
         </div>
         </section>
 
         <section class="content-section-a">
             <div class="container">
-                			
-                <form action="banco/insereNota.php?idDisciplina=<?php echo $id; ?>" method="POST">	
-              		
+                
+			
+                <form action="banco/insereArquivo.php?idDisciplina=<?php echo $id; ?>" method="POST" enctype="multipart/form-data">
+			        
+			
                     <div class="form-group">
                         <label for="inputNome">Autor</label>
                         <input id="inputNome" name="inputNome" type="text" class="form-control" required placeholder="Insira seu nome">
-                    </div>                 
+                    </div>
+                 
                 
             </div>
         </section>
@@ -56,21 +61,23 @@
         <section class="content-section-b">
             <div class="container">
                     <div class="form-group">
-                        <label for="inputNota">Nota</label>
-                        <input id="inputNota" name="inputNota" type="text" class="form-control" required placeholder="Insira sua mensagem">
-                           <br>					 	
-                        <button class="btn btn-primary" type="submit">Inserir</button>					
+                        <label for="inputDescricao">Descrição</label>
+                        <input id="inputDescricao" name="inputDescricao" type="text" class="form-control" required placeholder="Insira a descrição do arquivo">						
+                        <br>  										
+						  <input name="file" class="input-file" type="file">
+						  <br>
+						  <br>
+                        <button name="enviar_arquivo" class="btn btn-primary" type="submit">Inserir</button>
                     </div>
                 </form>
-                      <br>
-                    <form action="disciplina.php">                         
-                      <button class="btn btn-primary" type="submit">Voltar</button>
-                    </form>
-					
+                        <br>
+<form action="disciplina.php">                         
+<button class="btn btn-primary" type="submit">Voltar</button>
+</form>
             </div>
         </section>
         <!-- Footer -->
-        <?php	
+        <?php
         include 'footer.php';
         ?>
 

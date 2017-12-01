@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Grupo Academico</title>
+        <title>Grupo Acadêmico</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,7 @@
     </head>
 
     <body>
-        <!-- Navegaï¿½ï¿½o -->
+        <!-- Navegação -->
         <?php
         include 'navbar.php';
         ?>
@@ -56,7 +56,8 @@
 					<label>Selecionar Disciplina:</label> 
 					<select id="disciplinas" name="disciplinas"> 
 						<?php while($prod = mysqli_fetch_array($query)) { ?> 
-							<option value="<?php echo $prod['idt_disciplina'] ?>"><?php echo $prod['nme_disciplina'] ?></option> <?php 
+							<option value="<?php echo $prod['idt_disciplina'] ?>"><?php echo $prod['nme_disciplina'] ?></option> <?php
+                                $idDisciplina = $_POST["disciplinas"];																							
 						} ?> 
 					</select> 
 					<br>
@@ -64,10 +65,11 @@
 				</form>							
             </div>
         </section>
-
+  
         <section class="content-section-b">
             <div class="conteiner">
-                <p class="h4 text-center"><strong>NotaÃ§Ãµes</strong></p>
+                <p class="h4 text-center"><strong>Notações</strong></p>
+				                 
                 <br>
                 <div class="row">
                     <div class="col-md-4"></div>
@@ -75,9 +77,9 @@
                         <table class="table table-hover table-striped">
                             <tr>
                             <strong>
-                                <th></th>
-                                <th></th>
-                                <th></th>
+                                <th>Codigo</th>
+                                <th>Autor</th>
+                                <th>Nota</th>
                             </strong>
                             </tr>
                             <tr>
@@ -96,64 +98,92 @@
                 </div>
                 <br>
             </div>
-            <!--Botï¿½es-->
+            <!--Botões-->
             <div class="container" >
-                <div>
-                    <form action="inserirNota.php">
-                    <button id="inserir" name="inserir" class="btn btn-primary">Inserir</button> 
+                <div>							
+				
+                    <form action="inserirNota.php" method "POST">                       
+                         <input type="hidden" name="idDisciplina" value="<?php echo $idDisciplina; ?>" />  
+						   <button id="inserir" name="" class="btn btn-primary">Inserir</button> 							
                     </form>
-                    <br>
-                    <form action =""> 
-                    <button id="editar" name="editar" class="btn btn-primary">Editar</button>
+                <br>
+                    <form action=""> 
+                            <button id="editar" name="editar" class="btn btn-primary">Editar</button>
                     </form>
-                    <br>
-                    <form action ="">  
-                    <button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
+                <br>
+                    <form action="banco/excluirNota.php?idDisciplina=<?php echo $idDisciplina; ?>" method="POST">  
+                            <button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
+							  <input id="inputCodigo" name="inputCodigo" type="text">
+							  <br>
+							 
                     </form>
 
                 </div>
             </div>
         </section>
-
+		 						
+                     
         <section class="content-section-a">
             <div class="conteiner">
+			 
                 <p class="h4 text-center"><strong>Arquivos</strong></p>
                 <br>
                 <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <table class="table table-hover table-striped">
-
+			  
+			
+				        <table class="table table-hover table-striped">
                             <tr>
+					
                             <strong>
-                                <th></th>
-                                <th></th>
-                                <th></th>
+                                <th>Autor</th>
+                                <th>Descricao</th>
+                                <th>Arquivo</th>
                             </strong>
+        
                             </tr>
-
+							
+							<tr>
+					<?php
+						$query = mysqli_query($conexao, "SELECT * FROM tb_arquivo WHERE fk_idt_disciplina = '$id_Disciplina' ");
+						while($prod = mysqli_fetch_array($query)){							 
+					?>	
+                                <td><?php echo $prod['aut_arquivo']; ?></td>
+								<td> </td>
+								<td> </td>
+								
+                            </tr>
+							
                             <tr>
                                 <td></td>
                                 <td></td>
                                 <td></td>
+								
                             </tr>
-
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                        </table>
+							<?php 
+							 } 
+							?>
+						</table>
+			
                     </div>
                 </div>
             </div>
-            <!--Botï¿½es-->
+		
+            <!--Botões-->
+			
             <div class="container">
                 <div class="col-md-4 text-center"> 
-                    <button id="inserir" name="inserir" class="btn btn-primary">Inserir</button> 
+				<form action="inserirArquivo.php" method "POST">
+				 <input type="hidden" name="idDisciplina" value="<?php echo $idDisciplina; ?>" />  
+                    <button id="inserir" name="" class="btn btn-primary">Inserir</button> 
+			    </form>
+		     <br>
+			 <br>
+				<form action="" method "POST">
                     <button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
-                </div>
+                </form>
+				</div>
             </div>
         </section>
 
@@ -190,18 +220,18 @@
                     </div>
                 </div>
             </div>
-            <!--Botï¿½es-->
+            <!--Botões-->
             <div class="container">
                 <div> 
-          <form action="inserirEvento.php">                    
-               <button id="inserir" name="inserir" class="btn btn-primary">Inserir</button> 
-          </form>
-            <br>    
-           <form action ="">                
-               <button id="editar" name="editar" class="btn btn-primary">Editar</button> 
-           </form>
-           <br>
-<button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
+              <form action="inserirEvento.php">                    
+                 <button id="inserir" name="inserir" class="btn btn-primary">Inserir</button> 
+              </form>
+                <br>    
+             <form action ="">                
+                  <button id="editar" name="editar" class="btn btn-primary">Editar</button> 
+             </form>
+                  <br>
+             <button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
                 </div>
             </div>
         </section>
