@@ -180,8 +180,9 @@
 			    </form>
 		     <br>
 			 <br>
-				<form action="" method "POST">
-                    <button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
+			 <form action="banco/excluirArquivo.php?idDisciplina=<?php echo $idDisciplina; ?>" method="POST">  
+                    <button id="excluir" name="" class="btn btn-primary">Excluir</button> 
+					   <input id="inputCodigoArquivo" name="inputCodigoArquivo" type="text">
                 </form>
 				</div>
             </div>
