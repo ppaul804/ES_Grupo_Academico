@@ -132,6 +132,7 @@
         </section>
 
         <!--Arquivos-->
+         <?php $query = mysqli_query($conexao, "SELECT * FROM tb_arquivo WHERE fk_idt_disciplina = $idDisciplina"); ?>    
         <section class="content-section-a">
             <div class="conteiner">
 
@@ -149,11 +150,12 @@
                                 <th>Arquivo</th>
                             </strong>
                             </tr>
+                             <?php while($prod3 = mysqli_fetch_array($query)) { ?>
                             <tr>							
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
+                                <td><?php echo $prod3['idt_arquivo'] ?></td>
+								<td><?php echo $prod3['aut_arquivo'] ?></td>
+								<td><?php echo $prod3['des_arquivo'] ?></td>
+								<td><a href="C:<?php echo $prod3['nme_arquivo'] ?>" target="_blank">Acessar Arquivo</a></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -161,12 +163,7 @@
                                 <td></td>
                                 <td></td>
                             </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                            <?php } ?>
                         </table>
                     </div>
                 </div>
@@ -191,6 +188,7 @@
         </section>
 
         <!--Eventos-->
+        <?php $query = mysqli_query($conexao, "SELECT * FROM tb_evento WHERE fk_idt_disciplina = $idDisciplina"); ?>
         <section class="content-section-b">
             <div class="conteiner">
                 <p class="h4 text-center"><strong>Eventos</strong></p>
@@ -207,11 +205,11 @@
                                 <th>Data</th>
                             </strong>
                             </tr>
-
+                            <?php while($prod4 = mysqli_fetch_array($query)) { ?>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td><?php echo $prod4['idt_evento'] ?></td>
+                                <td><?php echo $prod4['des_evento'] ?></td>
+                                <td><?php echo $prod4['dta_evt_evento'] ?></td>
                             </tr>
 
                             <tr>
@@ -219,7 +217,7 @@
                                 <td></td>
                                 <td></td>
                             </tr>
-
+                            <?php } ?>
                         </table>
                     </div>
                 </div>
