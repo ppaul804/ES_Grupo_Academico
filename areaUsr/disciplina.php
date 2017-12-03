@@ -209,7 +209,7 @@
                             <tr>
                                 <td><?php echo $prod4['idt_evento'] ?></td>
                                 <td><?php echo $prod4['des_evento'] ?></td>
-                                <td><?php echo $prod4['dta_evt_evento'] = date("d/m/Y") ?></td>
+                                <td><?php echo $prod4['dta_evt_evento']?></td>
                             </tr>
 
                             <tr>
