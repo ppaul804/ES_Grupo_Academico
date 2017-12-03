@@ -209,7 +209,8 @@
                             <tr>
                                 <td><?php echo $prod4['idt_evento'] ?></td>
                                 <td><?php echo $prod4['des_evento'] ?></td>
-                                <td><?php echo $prod4['dta_evt_evento']?></td>
+                                  <td><?php  $timestamp = strtotime($prod4[dta_evt_evento]); 
+					     echo date('d/m/Y', $timestamp); ?></td>
                             </tr>
 
                             <tr>
