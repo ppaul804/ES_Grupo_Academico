@@ -21,7 +21,7 @@
     </head>
 
     <body>
-        <!-- Navegação -->
+        <!-- Navega褯 -->
         <?php
         include 'navbar.php';
         ?>
@@ -29,40 +29,37 @@
         <!-- Page Content -->
         <section class="content-section-b" style="margin-top: 25px">
             <div class="container">			
-				<p class="h3 text-center"><strong>Eventos</strong></p>
+				<p class="h3 text-center"><strong>Editar Nota</strong></p>
 				
-				<?php require "../banco/configuracao.php";
-				
-				session_start();
-				
-				$id = $_GET['idDisciplina'];
-				
-				?>								
-				
+				<?php require "../banco/configuracao.php";				
+				session_start();				
+				$id = $_GET['idDisciplina'];	
+                $idNota = $_POST["inputCodigoEditar"];			
+				?>												
         </div>
         </section>
                 
-                <form action="banco/insereEvento.php?idDisciplina=<?php echo $id ?>" method="POST">
+                <form action="banco/editarNota.php?idDisciplina=<?php echo $id; ?>&codigoNota=<?php echo $idNota; ?>" method="POST">
                     <div class="form-group">                
 
         <section class="content-section-b">
             <div class="container">
                     <div class="form-group">
 					<br>                        
-				<label for="inputDescricao">Descrição</label>
-                        <input id="inputDescricao" name="inputDescricao" type="text" class="form-control" required placeholder="Insira o tipo ou descrição do evento">
+				<label for="inputNotaCodigo">Código da Nota: <?php echo $idNota; ?> </label>
+				<br>
+				<label for="inputNota">Nota</label>
+                        <input id="inputNota" name="inputNota" type="text" class="form-control" required placeholder="Digite a nova mensagem">
                       <br> 
-				<label for="inputData">Data</label>
-                        <input id="inputData" name="inputData" type="date" class="form-control" required placeholder="Insira a data do evento">
-                        <br>
-                        <button class="btn btn-primary" type="submit">Inserir</button>
+		
+                        <button class="btn btn-primary" type="submit">Editar</button>
 					<br>
       
                 </form>
-<br>
-<form action="disciplina.php">                         
-<button class="btn btn-primary" type="submit">Voltar</button>
-</form>
+			<br>
+				<form action="disciplina.php">                         
+					<button class="btn btn-primary" type="submit">Voltar</button>
+				</form>
             </div>
         </section>
         <!-- Footer -->

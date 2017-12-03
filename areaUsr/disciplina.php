@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,7 +15,6 @@
         <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="shortcut icon" href="../img/favicon.png">
 
         <!-- Custom styles for this template -->
         <link href="../css/landing-page.css" rel="stylesheet">
@@ -78,7 +77,7 @@
                         <table class="table table-hover table-striped">
                             <tr>
                             <strong>
-                                <th>Codigo</th>
+                                <th>Código</th>
                                 <th>Autor</th>
                                 <th>Nota</th>
                             </strong>
@@ -108,8 +107,9 @@
 						   <button id="inserir" name="" class="btn btn-primary">Inserir</button> 							
                     </form>
                 <br>
-                    <form action=""> 
+                    <form action="editaNota.php?idDisciplina=<?php echo $idDisciplina; ?>" method="POST"> 
                             <button id="editar" name="editar" class="btn btn-primary">Editar</button>
+							<input id="inputCodigoEditar" name="inputCodigoEditar" type="text">
                     </form>
                 <br>
                     <form action="banco/excluirNota.php?idDisciplina=<?php echo $idDisciplina; ?>" method="POST">  
@@ -138,19 +138,17 @@
                             <tr>
 					
                             <strong>
+                                <th>Código</th>
                                 <th>Autor</th>
-                                <th>Descricao</th>
-                                <th>Arquivo</th>
+                                <th>Descrição</th>
+								<th>Arquivo</th>
                             </strong>
         
                             </tr>
 							
-							<tr>
-					<?php
-						$query = mysqli_query($conexao, "SELECT * FROM tb_arquivo WHERE fk_idt_disciplina = '$id_Disciplina' ");
-						while($prod = mysqli_fetch_array($query)){							 
-					?>	
-                                <td><?php echo $prod['aut_arquivo']; ?></td>
+							<tr>							
+                                <td> </td>
+								<td> </td>
 								<td> </td>
 								<td> </td>
 								
@@ -160,11 +158,18 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
+								<td> </td>
 								
                             </tr>
-							<?php 
-							 } 
-							?>
+							
+							 <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+								<td> </td>
+								
+                            </tr>
+							
 						</table>
 			
                     </div>
@@ -175,12 +180,13 @@
 			
             <div class="container">
                 <div class="col-md-4 text-center"> 
+			
 				<form action="inserirArquivo.php" method "POST">
 				 <input type="hidden" name="idDisciplina" value="<?php echo $idDisciplina; ?>" />  
                     <button id="inserir" name="" class="btn btn-primary">Inserir</button> 
 			    </form>
 		     <br>
-			 <br>
+			 
 			 <form action="banco/excluirArquivo.php?idDisciplina=<?php echo $idDisciplina; ?>" method="POST">  
                     <button id="excluir" name="" class="btn btn-primary">Excluir</button> 
 					   <input id="inputCodigoArquivo" name="inputCodigoArquivo" type="text">
@@ -200,9 +206,9 @@
 
                             <tr>
                             <strong>
-                                <th></th>
-                                <th></th>
-                                <th></th>
+                                <th>Código</th>
+                                <th>Descrição</th>
+                                <th>Data</th>
                             </strong>
                             </tr>
 
@@ -225,15 +231,19 @@
             <!--Botões-->
             <div class="container">
                 <div> 
-              <form action="inserirEvento.php">                    
+              <form action="inserirEvento.php?idDisciplina=<?php echo $idDisciplina; ?>" method="POST">                    
                  <button id="inserir" name="inserir" class="btn btn-primary">Inserir</button> 
               </form>
                 <br>    
-             <form action ="">                
+             <form action="editaEvento.php?idDisciplina=<?php echo $idDisciplina; ?>" method="POST" =>                
                   <button id="editar" name="editar" class="btn btn-primary">Editar</button> 
+				   <input id="inputCodigoEventoEditar" name="inputCodigoEventoEditar" type="text">
              </form>
                   <br>
-             <button id="excluir" name="excluir" class="btn btn-primary">Excluir</button> 
+				  <form action="banco/excluirEvento.php?idDisciplina=<?php echo $idDisciplina; ?>" method="POST">  
+             <button id="excluir" name="excluir" class="btn btn-primary">Excluir</button>
+				 <input id="inputCodigoEvento" name="inputCodigoEvento" type="text">
+				   </form>
                 </div>
             </div>
         </section>

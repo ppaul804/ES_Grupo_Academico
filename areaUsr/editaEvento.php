@@ -29,33 +29,35 @@
         <!-- Page Content -->
         <section class="content-section-b" style="margin-top: 25px">
             <div class="container">			
-				<p class="h3 text-center"><strong>Eventos</strong></p>
+				<p class="h3 text-center"><strong>Editar Evento</strong></p>
 				
 				<?php require "../banco/configuracao.php";
 				
 				session_start();
 				
 				$id = $_GET['idDisciplina'];
-				
+				$idEvento = $_POST["inputCodigoEventoEditar"];
 				?>								
 				
         </div>
         </section>
                 
-                <form action="banco/insereEvento.php?idDisciplina=<?php echo $id ?>" method="POST">
+                <form action="banco/editarEvento.php?idDisciplina=<?php echo $id; ?>&codigoEvento=<?php echo $idEvento; ?>" method="POST">
                     <div class="form-group">                
 
         <section class="content-section-b">
             <div class="container">
                     <div class="form-group">
-					<br>                        
+					<br>
+				<label for="inputEventoCodigo">Código do Evento: <?php echo $idEvento; ?> </label>
+					<br>
 				<label for="inputDescricao">Descrição</label>
                         <input id="inputDescricao" name="inputDescricao" type="text" class="form-control" required placeholder="Insira o tipo ou descrição do evento">
                       <br> 
 				<label for="inputData">Data</label>
                         <input id="inputData" name="inputData" type="date" class="form-control" required placeholder="Insira a data do evento">
                         <br>
-                        <button class="btn btn-primary" type="submit">Inserir</button>
+                        <button class="btn btn-primary" type="submit">Editar</button>
 					<br>
       
                 </form>
