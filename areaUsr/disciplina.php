@@ -153,9 +153,9 @@
                              <?php while($prod3 = mysqli_fetch_array($query)) { ?>
                             <tr>							
                                 <td><?php echo $prod3['idt_arquivo'] ?></td>
-								<td><?php echo $prod3['aut_arquivo'] ?></td>
-								<td><?php echo $prod3['des_arquivo'] ?></td>
-								<td><a href="C:<?php echo $prod3['nme_arquivo'] ?>" target="_blank">Acessar Arquivo</a></td>
+				<td><?php echo $prod3['aut_arquivo'] ?></td>
+				<td><?php echo $prod3['des_arquivo'] ?></td>
+				<td><a href="C:<?php echo $prod3['nme_arquivo'] ?>" target="_blank">Acessar Arquivo</a></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -202,14 +202,14 @@
                             <strong>
                                 <th>Código</th>
                                 <th>Descrição</th>
-                                <th>Data</th>
+                                <th>Data do Evento</th>
                             </strong>
                             </tr>
                             <?php while($prod4 = mysqli_fetch_array($query)) { ?>
                             <tr>
                                 <td><?php echo $prod4['idt_evento'] ?></td>
                                 <td><?php echo $prod4['des_evento'] ?></td>
-                                <td><?php echo $prod4['dta_evt_evento'] ?></td>
+                                <td><?php echo $prod4['dta_evt_evento'] = date("d/m/Y") ?></td>
                             </tr>
 
                             <tr>
