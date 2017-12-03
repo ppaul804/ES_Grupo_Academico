@@ -112,8 +112,7 @@
             <div class="row" >
                 <label class="col-md-4 control-label"></label>
                 <div class="col-md-4 text-center">
-                    <form action="inserirNota.php" method="POST">                       
-                        <input type="hidden" name="idDisciplina" value="<?php echo $idDisciplina; ?>" />  
+                    <form action="inserirNota.php?idDisciplina=<?php echo $idDisciplina; ?>" method="POST">                       
                         <button id="inserir" name="" class="btn btn-primary">Inserir</button> 							
                     </form>
                     <br>
@@ -153,9 +152,9 @@
                              <?php while($prod3 = mysqli_fetch_array($query)) { ?>
                             <tr>							
                                 <td><?php echo $prod3['idt_arquivo'] ?></td>
-				<td><?php echo $prod3['aut_arquivo'] ?></td>
-				<td><?php echo $prod3['des_arquivo'] ?></td>
-				<td><a href="C:<?php echo $prod3['nme_arquivo'] ?>" target="_blank">Acessar Arquivo</a></td>
+								<td><?php echo $prod3['aut_arquivo'] ?></td>
+								<td><?php echo $prod3['des_arquivo'] ?></td>
+								<td><a href="C:<?php echo $prod3['nme_arquivo'] ?>" target="_blank">Acessar Arquivo</a></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -174,8 +173,7 @@
             <div class="row">
                 <label class="col-md-4 control-label"></label>
                 <div class="col-md-4 text-center"> 
-                    <form action="inserirArquivo.php" method="POST">
-                          <input type="hidden" name="idDisciplina" value="<?php echo $idDisciplina; ?>" />  
+                    <form action="inserirArquivo.php?idDisciplina=<?php echo $idDisciplina; ?>" " method="POST">
                         <button id="inserir" name="" class="btn btn-primary">Inserir</button> 
                     </form>
                     <br>	 
