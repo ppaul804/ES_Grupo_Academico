@@ -74,6 +74,7 @@
         </section>
 
         <!--Notações-->
+        <?php $query = mysqli_query($conexao, "SELECT * FROM tb_notacao WHERE fk_idt_disciplina = $idDisciplina"); ?>	
         <section class="content-section-b">
             <div class="conteiner">
                 <p class="h4 text-center"><strong>Notações</strong></p>
@@ -89,16 +90,18 @@
                                 <th>Nota</th>
                             </strong>
                             </tr>
+                            <?php while($prod2 = mysqli_fetch_array($query)) { ?> 
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td><?php echo $prod2['idt_notacao'] ?></td>
+                                <td><?php echo $prod2['aut_notacao'] ?></td>
+                                <td><?php echo $prod2['des_notacao'] ?></td>
                             </tr>
 
                             <tr>
                                 <td></td>
                                 <td></td>
                                 <td></td>
+                                  <?php } ?>
                             </tr>
                         </table>
                     </div>
