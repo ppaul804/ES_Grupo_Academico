@@ -5,59 +5,57 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-
+ 
         <title>Grupo Acadêmico</title>
-
+ 
         <!-- Bootstrap core CSS -->
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+ 
         <!-- fontes costumizadas para este template -->
         <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="shortcut icon" href="../img/favicon.png">
-
+ 
         <!-- Custom styles for this template -->
         <link href="../css/landing-page.css" rel="stylesheet">
     </head>
-
+ 
     <body>
         <!-- Navegação -->
         <?php
         include 'navbar.php';
         ?>
-
+ 
         <!-- Page Content -->
-        
+ 
         <!--Criar Nova Disciplina-->
         <section class="content-section-b" style="margin-top: 25px">
             <div class="container">
                 <p class="h3 text-center"><strong>Disciplinas</strong></p>
-
+ 
                 <form action="banco/disciplinaCadastrar.php" method="POST">
                     <div class="form-group">
                         <label for="inputDisciplina">Criar Nova Disciplina</label>
                         <input id="inputDisciplina" name="inputDisciplina" type="text" class="form-control" required placeholder="Nome do Disciplina">
                     </div>
-
+ 
                     <button type="submit" class="btn btn-primary">Criar</button>
                 </form>
             </div>
         </section>
-
+ 
         <!--Selecionar Disciplina-->
         <section class="content-section-a">
             <div class="container">
-
+ 
                 <?php
                 require "../banco/configuracao.php";
-
                 session_start();
-
                 $grupos = $_SESSION["grupos"];
                 $query = mysqli_query($conexao, "SELECT * FROM tb_disciplina WHERE fk_idt_grupo = $grupos");
                 ?>
-
+ 
                 <form action="" method="POST"> 
                     <label>Selecionar Disciplina:</label> 
                     <select id="disciplinas" name="disciplinas"> 
@@ -72,12 +70,15 @@
                 </form>							
             </div>
         </section>
-
+ 
         <!--Notações-->
-        <?php $query = mysqli_query($conexao, "SELECT * FROM tb_notacao WHERE fk_idt_disciplina = $idDisciplina"); ?>	
+        <?php $query = mysqli_query($conexao, "SELECT * FROM tb_notacao WHERE fk_idt_disciplina = $idDisciplina"); 
+	error_reporting(0);
+	ini_set(“display_errors”, 0 );       
+         ?>	
         <section class="content-section-b">
             <div class="conteiner">
-                <p class="h4 text-center"><strong>Notações</strong></p>
+                <p class="h4 text-center"><strong>Notaçoes</strong></p>
                 <br>
                 <div class="row">
                     <label class="col-md-4 control-label"></label>
@@ -85,7 +86,7 @@
                         <table class="table table-hover table-striped">
                             <tr>
                             <strong>
-                                <th>Código</th>
+                                <th>Codigo</th>
                                 <th>Autor</th>
                                 <th>Nota</th>
                             </strong>
@@ -96,7 +97,7 @@
                                 <td><?php echo $prod2['aut_notacao'] ?></td>
                                 <td><?php echo $prod2['des_notacao'] ?></td>
                             </tr>
-
+ 
                             <tr>
                                 <td></td>
                                 <td></td>
@@ -129,12 +130,12 @@
                 </div>
             </div>
         </section>
-
+ 
         <!--Arquivos-->
          <?php $query = mysqli_query($conexao, "SELECT * FROM tb_arquivo WHERE fk_idt_disciplina = $idDisciplina"); ?>    
         <section class="content-section-a">
             <div class="conteiner">
-
+ 
                 <p class="h4 text-center"><strong>Arquivos</strong></p>
                 <br>
                 <div class="row">
@@ -143,18 +144,18 @@
                         <table class="table table-hover table-striped">
                             <tr>	
                             <strong>
-                                <th>Código</th>
+                                <th>Codigo</th>
                                 <th>Autor</th>
-                                <th>Descrição</th>
+                                <th>Descriçao</th>
                                 <th>Arquivo</th>
                             </strong>
                             </tr>
                              <?php while($prod3 = mysqli_fetch_array($query)) { ?>
                             <tr>							
                                 <td><?php echo $prod3['idt_arquivo'] ?></td>
-								<td><?php echo $prod3['aut_arquivo'] ?></td>
-								<td><?php echo $prod3['des_arquivo'] ?></td>
-								<td><a href="C:<?php echo $prod3['nme_arquivo'] ?>" target="_blank">Acessar Arquivo</a></td>
+				<td><?php echo $prod3['aut_arquivo'] ?></td>
+				<td><?php echo $prod3['des_arquivo'] ?></td>
+				<td><a href="assets/<?php echo $prod3['nme_arquivo'] ?>" target="_blank">Acessar Arquivo</a></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -167,9 +168,9 @@
                     </div>
                 </div>
             </div>
-
+ 
             <!--Botões-->
-
+ 
             <div class="row">
                 <label class="col-md-4 control-label"></label>
                 <div class="col-md-4 text-center"> 
@@ -184,7 +185,6 @@
                 </div>
             </div>
         </section>
-
         <!--Eventos-->
         <?php $query = mysqli_query($conexao, "SELECT * FROM tb_evento WHERE fk_idt_disciplina = $idDisciplina"); ?>
         <section class="content-section-b">
@@ -195,11 +195,10 @@
                 <label class="col-md-4 control-label"></label>
                     <div class="col-md-4 text-center">
                         <table class="table table-hover table-striped">
-
                             <tr>
                             <strong>
-                                <th>Código</th>
-                                <th>Descrição</th>
+                                <th>Codigo</th>
+                                <th>Descriçao</th>
                                 <th>Data do Evento</th>
                             </strong>
                             </tr>
@@ -210,7 +209,6 @@
                                   <td><?php  $timestamp = strtotime($prod4[dta_evt_evento]); 
 					     echo date('d/m/Y', $timestamp); ?></td>
                             </tr>
-
                             <tr>
                                 <td></td>
                                 <td></td>
@@ -241,16 +239,12 @@
                 </div>
             </div>
         </section>
-
         <!-- Footer -->
         <?php
         include 'footer.php';
         ?>
-
         <!-- Bootstrap core JavaScript -->
         <script src="../vendor/jquery/jquery.min.js"></script>
         <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
     </body>
-
 </html>
